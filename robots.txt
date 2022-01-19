@@ -1,0 +1,13 @@
+User-Agent: *
+Disallow: /portfolio/
+Disallow: /include/
+Disallow: /icons/
+Disallow: /bitrix/
+Disallow: /desktop_app/
+Disallow: /marketplace/
+Disallow: /apconnect/
+Disallow: /oauth/
+Disallow: /testing/
+Disallow: /wmail_f5e5d8d3ea28c3b83caed36edfb81095.html
+Host: https://manao-team.com
+Sitemap: https://manao-team.com/sitemap.xml
