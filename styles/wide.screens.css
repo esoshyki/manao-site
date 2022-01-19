@@ -1,0 +1,121 @@
+.about-us-advantages-item {
+    margin-right: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 50%;
+    margin: 0 0 25px
+}
+
+.about-us-advantages-item-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: static;
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+}
+
+.about-us-advantages-item-text {
+    width: calc(100% - 80px);
+    padding: 0
+}
+
+.reviews-slider__prev, 
+.publications-slider__prev,
+.clients-slider__prev {
+    right: calc(50% - 10px) !important
+}
+
+.reviews-slider__next, 
+.publications-slider__next, 
+.clients-slider__next {
+    right: calc(50% - 50px) !important
+}
+
+@media screen and (max-height: 750px) and (min-width: 1000px) {
+
+    .about-us-advantages-item {
+        margin: 0 0 5px
+    }
+    
+    .about-us-advantages-item-img {
+        margin-right: 5px;
+    }
+    
+    .about-us-advantages-item-text {
+        padding-top: 0;
+    }
+
+    .about-us-section-wrap {
+        padding-top: 0;
+    }
+
+    .about-us-section-wrap h2 {
+        margin-bottom: 0;
+    }
+
+    .about-partners {
+        margin-bottom: 0;
+    }
+
+    .contacts-wrap {
+        padding-top: 0px;
+    }
+
+    .contacts-wrap h2 {
+        margin-bottom: 20px;
+    }
+
+    .b-career__wrap {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .right-content {
+        padding-top: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media screen and (max-height: 700px) and (min-width: 1000px) {
+
+    .about-outsource-section-wrap {
+        height: calc(100vh - 100px);
+        padding-top: 20px;
+    }
+
+    .stack-item {
+        margin-bottom: 20px !important;
+    }
+
+    .about-us-advantages-item-text {
+        padding-top: 10px;
+    }
+
+    .reviews-item {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .reviews-slider-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .contacts-section .right-content {
+        padding-top: 30px;
+    }
+
+    .contacts-wrap {
+        padding-top: 0px;
+    }
+
+    .contacts-wrap h2 {
+        margin-bottom: 10px;
+    }
+}
