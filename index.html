@@ -23,6 +23,7 @@
 <style>.grecaptcha-badge{visibility:hidden;}</style>
 <script type='text/javascript' data-skip-moving='true'>window['recaptchaOptions']={'size':'invisible','theme':'dark','key':'6Lell8AUAAAAAI8fhS82lvbcDuWtMqzJtFPbXUdF','lang':'ru','showIcon':'Y'};</script>
 <script type="text/javascript" data-skip-moving="true">
+
 function renderRecaptcha(id) {	
 	var recaptcha = document.getElementById(id); 	
 	if (!recaptcha) { 
@@ -1282,20 +1283,39 @@ function renderRecaptchaV3(id) {
 			<p></p>
 				<div class="order-modal-item">
 			<label for="">Ф.И.О.</label>
-			<input tabindex="-100" type="text"  class="inputtext"  name="form_text_1" value="" size="0" />		</div>
+			<input required tabindex="-100" type="text"  class="inputtext"  name="form_text_1" value="" size="0" />		</div>
+			<span class="form-error" id="feedback-form-error-name"></span>
 			<div class="order-modal-item">
 			<label for="">Телефон</label>
-			<input tabindex="-99" type="text"  class="inputtext"  name="form_text_2" value="" size="0" />		</div>
+			<input required  tabindex="-99" type="text"  class="inputtext"  name="form_text_2" value="" size="0" />		</div>
 			<div class="order-modal-item">
 			<label for="">Электронная почта</label>
 			<input tabindex="-98" type="text"  class="inputtext"  name="form_email_3" value="" size="0" />		</div>
+			<span class="form-error" id="feedback-form-error-name"></span>
 			<div class="order-modal-item">
 			<label for="">Название компании</label>
 			<input tabindex="-97" type="text"  class="inputtext"  name="form_text_4" value="" size="0" />		</div>
 			<div class="order-modal-item">
 			<label for="">Расскажите о вашем заказе</label>
 			<textarea tabindex="-96" name="form_textarea_5" cols="40" rows="5"  class="inputtextarea" ></textarea>		</div>
+
+			
+				<div class="order-modal-line">
+						<span>
+							Я ознакомился и 
+						</span>
+
+						<span id="open-rules-popup">
+							даю совое согласие на обработку персональных данных
+						</span>
+					
+					<input type="checkbox" >
+				</div>
 	
+			<div class="feedback-from-rules">
+
+			</div>
+
 			<div class="order-modal-file">
 			<input type="file"  name="form_file_6" class="order-file-input inputfile" size="0">
 			<img src="local/templates/manao/img/file.png" alt="">
@@ -1307,8 +1327,210 @@ function renderRecaptchaV3(id) {
 		</div>
 		<div class="order-modal-send">
 		<input id="modalSend"  type="submit" name="web_form_submit" value="Отправить" />
+
 	</div>
-	<input type="hidden" name="g-recaptcha-v3" id="grecaptcha-IEcdi" class="g-recaptcha-v3"/></form>		</div>
+	<input type="hidden" name="g-recaptcha-v3" id="grecaptcha-IEcdi" class="g-recaptcha-v3"/></form>	
+
+	<div class="popup-rules popup-rules-hidden close-popup">
+
+		<div class="popup-rules__body">
+			<a href="#" class="close_btn menu-active close-popup" >
+				<span class="close_rectangle close-popup"></span>
+			</a>
+			<h4>Согласие на обработку персональных данных</h4>
+
+			<p>
+				Продолжая использовать данный сайт, я даю свободно, своей волей и в своем интересе свое конкретное, информированное и сознательное согласие на обработку ООО «Манао Дев» (220073, ул. Бирюзова, д. 4, корп. 5, комн. 4005, г. Минск, Республика Беларусь) (далее – «Компания») моих следующих персональных данных, собираемых через сайт https://manao-dev.by (далее – «Сайт»):
+			</p>
+
+			<p>
+				Cведения, предоставленные мной в формах обратной связи, а также собираемые в автоматическом режиме (IP-адреса устройств, с помощью которых посещается Сайт, тип устройства, дата и время посещения Сайта, обновления и удаления данных, сведения о действиях на Сайте (в т.ч. о просматриваемой рекламе, использовании сервисов Сайта), файлы «cookies»), в т.ч. с использованием метрических программ (систем) Яндекс.Метрика, Google Analytics, Google Tag Manager, Hotjar и других, в соответствии с условиями обработки, изложенными в настоящем согласии.
+			</p>
+
+			<h6>Действия с персональными данными и способы обработки.</h6>
+
+			<p>
+				Настоящее согласие дается на совершение любых действий (операций) или совокупности действий (операций), включая сбор, запись, систематизацию, накопление, хранение, уточнение, извлечение, использование, обезличивание, блокирование, удаление, уничтожение персональных данных, совершаемые любыми способами, как с использованием средств автоматизации, так и без их использования, в том числе путем внесения в информационные системы персональных данных Компании.
+			</p>
+
+			<h6>Цели.</h6>
+
+			<p>
+				Обработка моих персональных данных на основании настоящего согласия может осуществляться Компанией в целях:
+			</p>
+
+			<ul>
+				<li>предоставления мне запрашиваемой информации об услугах Компании, </li>
+				<li>улучшения работы Сайта, повышения удобства и эффективности моей работы с Сайтом,</li>
+				<li>предоставления решений и услуг, наиболее отвечающих моим потребностям,</li>
+				<li>определения моих предпочтений, отображения рекламных объявлений (поведенческой рекламы),</li>
+				<li>предоставления целевой информации по решениям и услугам Компании и её партнёров,</li>
+				<li>предоставления мне таргетированной рекламы на основе моих предпочтений/действий на Сайте посредством сервисов ВКонтакте, Facebook, Instagram, - обеспечения технической возможности функционирования Сайта.</li>
+			</ul>
+
+			<h6>Третьи лица.</h6>
+
+			<p>
+				Я понимаю, что Компания использует рекламные услуги социальных сетей ВKонтакте, Facebook, Instagram, в связи с чем я даю свое согласие на передачу и предоставление доступа к моим персональным данным, собираемым через Сайт, а именно следующих:
+			</p>
+
+			<ul>
+				<li>IP-адреса устройств, с помощью которых посещается Сайт, история браузера, тип устройства, тип операционной системы и компьютера, мобильного браузера, дата и время посещения Сайта (сессии), обновления и удаления данных, сведения о действиях на Сайте (в т.ч. о просматриваемой рекламе, использовании сервисов Сайта), файлы «cookies»,</li>
+				<li>владельцам социальных сетей ВКонтакте (www.vk.com, Общество с ограниченной ответственностью «В Контакте» (ООО «В Контакте»), адрес места нахождения: 191024, Санкт-Петербург, ул. Херсонская, д. 12-14, литер А, помещение 1-Н), Facebook (www.facebook.com, Facebook, Inc. 1601 Willow Rd. Menlo Park, CA 94025), Instagram (www.instagram.com, Facebook, Inc. 1601 Willow Rd. Menlo Park, CA 94025), для целей предоставления сервисов измерения и таргетинга рекламы на основе моих предпочтений/действий посредством социальных сетей ВКонтакте, Facebook, Instagram.</li>
+			</ul>
+
+			<p>
+				Я уведомлен(а), что указанные выше владельцы социальных сетей Facebook, Instagram, ВКонтакте могут использовать файлы cookie, веб-маяки и другие технологии хранения данных для сбора или получения информации с Сайта и любых других ресурсов сети Интернет и использовать эту информацию для указанных выше целей. Я уведомлен(а), что могу запретить сбор и использование информации для таргетинга рекламы путем запрета сохранения файлов «cookies» в настройках своего браузера. Я также уведомлен(а), что могу получить доступ к механизму осуществления такого выбора на сайтах:
+			</p>
+
+			<ul>
+				<li>http://www.aboutads.info/choices</li>
+				<li>http://www.youronlinechoices.eu/.</li>
+			</ul>
+
+			<p>
+				Компания уведомила меня о том, что более подробную информацию о cookie-файлах и принципах их работы можно найти на ресурсе http://www.aboutcookies.org/.
+			</p>
+
+			<h6>Срок действия.</h6>
+
+			<p>
+				Настоящее согласие действует с момента его предоставления и в течение всего периода использования мной Сайта до момента отзыва настоящего согласия. На протяжении данного срока Компания, иные указанные в настоящем Согласии лица вправе обрабатывать, в том числе хранить, мои персональные данные, указанные в настоящем согласии.
+			</p>
+
+			<h6>Порядок отзыва согласия. </h6>
+
+			<p>
+				Мне известно, что настоящее согласие в любой момент может быть мною отозвано посредством направления в Компанию письменного уведомления об отзыве, направленного заказным письмом или переданного лично по адресу: Общество с ограниченной ответственностью «Манао Дев», 220073, ул. Бирюзова, д. 4, корп. 5, комн. 4005, г. Минск, Республика Беларусь. Отзыв настоящего Согласия вступает в силу с даты вручения соответствующего уведомления Компании.
+			</p>
+
+			<p>
+				В случае отзыва согласия на обработку персональных данных я проинформирован(а) о необходимости прекратить использование Сайта или, в случае отзыва согласия только в отношении обработки файлов «cookies», отказа от обработки персональных данных метрическими программами (Яндекс.Метрика, Google Analytics, Google Tag Manager, Hotjar и др.), в том числе собираемых и обрабатываемых для предоставления/показа поведенческой и таргетированной рекламы, я проинформирован(а) о необходимости отключить файлы «cookies» в настройках моего браузера.
+			</p>
+		
+		</div>
+
+	</div>
+
+	<style >
+     
+	    div.order-modal-line {
+			width: 100%;
+			padding: 20px 20px 40px 20px;
+			position: relative;
+		}
+
+		div.order-modal-line span {
+			color: #fff
+		}
+
+		div.order-modal-line input {
+			position: absolute;
+			right: 20px;
+    		top: calc(50% - 17px);
+		}
+
+		div.order-modal-line #open-rules-popup {
+			color: wheat;
+		}
+
+		div.order-modal-line #open-rules-popup:hover {
+			cursor: pointer;
+			filter: hue-rotate(20deg);
+		}
+
+		.popup-rules-hidden {
+			display: none !important;
+		}
+
+		.popup-rules {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			position: fixed;
+			top: 0;
+			left: 0;
+			height: 100vh;
+			width: 100vw;
+			background-color: rgba(0, 0, 0, 0.5);
+			z-index: 1000;
+		}
+
+		.popup-rules .close_btn {
+			position: absolute;
+			right: 20px;
+			top: 20px;
+			filter: invert(100%);
+		}
+
+		.popup-rules__body {
+			position: relative;
+			width: 80%;
+			height: 80%;
+			overflow-y: scroll;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: flex-start;
+			color: #000;
+			background-color: #fff;
+			margin: auto;
+			padding: 20px 50px;
+			font-family: "Roboto-Regular";
+		}
+
+		.popup-rules p {
+			font-size: 1rem;
+		}
+
+		.popup-rules h4 {
+			text-align: center;
+			font-size: 30px;
+		}
+
+		.popup-rules h4, .popup-rules h5 {
+			margin: 20px 2em
+		}
+
+		.popup-rules h6 {
+			font-size: 1rem;
+    		margin: 2em;
+		}
+
+		.popup-rules ul {
+			font-size: 1rem;
+    		margin-left: 30px;
+			color: #4F4F4F
+		}
+
+		.popup-rules li {
+			font-size: 1rem;
+    		margin: 2em;
+			color: #4F4F4F
+		}
+		
+		form[name="FEEDBACK_FORM"] .order-modal-item:nth-of-type(1) label::after {
+			content: "*";
+			position: relative;
+			left: 0px;
+			top: -10px;
+			font-size: 18px;
+		}
+
+		form[name="FEEDBACK_FORM"] .order-modal-item:nth-of-type(3) label::after {
+			content: "*";
+			position: relative;
+			left: 55px;
+			top: -20px;
+			font-size: 18px;
+		};
+
+
+
+	</style>
+
+</div>
 	</div>
 </div></div>
 </div>
@@ -1459,5 +1681,6 @@ else
 </script><script type="text/javascript" >
 					renderRecaptchaV3("grecaptcha-IEcdi");
 				</script></body>
-
+<script src="./form.js"></script>
+<script src="./popup.js"></script>
 </html>
